@@ -71,17 +71,17 @@ MODEL=deepseek/deepseek-v4-pro              # 完整 ID(带厂商前缀)
 ## 选模型的三个要点(最容易踩的坑)
 
 1. **必须写完整 ID** —— `deepseek-chat` 会 404,`deepseek/deepseek-v4-pro` 才行;
-2. **要跑 Agent / Claude Code,模型必须支持「工具调用」** —— 写作、角色扮演类模型(名字里带 `magnum`、`dolphin` 这类)**不支持工具调用**,一用就报 `400 the upstream provider rejected this request`;
+2. **要跑 Agent / Claude Code,模型必须支持「工具调用」** —— 挑模型时看模型页的能力标签,认准带 **Tools** 的;写作、角色扮演类微调模型没有这个标签,别拿来跑 Agent;
 3. **余额要够** —— 很多网关是预扣计费,余额为 0 时连免费模型也会返回 `402`。
 
-实测可用的模型(2026-09 在 deCloud 上逐个试过,供参考,以你网关的模型页为准):
+实测可用的模型(2026-09-23 在 deCloud 上逐个复核过,供参考,以你网关的模型页为准):
 
 | 场景 | 模型 |
 |---|---|
 | 通用 / 便宜 | `deepseek/deepseek-v4-pro`、`deepseek/deepseek-v4-flash` |
 | 代码 | `qwen/qwen3-coder`、`qwen/qwen3-coder-next` |
-| 其他已验证支持工具调用 | `moonshotai/kimi-k3`、`z-ai/glm-5.2`、`openai/gpt-5`、`anthropic/claude-sonnet-4.5` |
-| ❌ 不支持工具调用 | `anthracite-org/magnum-v4-72b`(写作向) |
+| 其他已验证支持工具调用 | `moonshotai/kimi-k3`、`z-ai/glm-5.2`、`qwen/qwen3-coder-next`、`openai/gpt-oss-120b` |
+| 不建议用于 Agent | 写作 / 角色扮演类微调模型 —— 模型页上没有 **Tools** 标签的那一类 |
 
 ## 其它网关怎么填
 

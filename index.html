@@ -63,7 +63,7 @@ cp config.example .env     # 填三行:网关地址 / Key / 模型名
 <table>
   <tr><th style="width:32%">坑</th><th>怎么回事</th></tr>
   <tr><td>模型名写简称</td><td><code>deepseek-chat</code> 会 404;必须写完整 ID(带厂商前缀),例如 <code>deepseek/deepseek-v4-pro</code></td></tr>
-  <tr><td>用不支持工具调用的模型跑 Agent</td><td>写作、角色扮演类模型(名字带 <code>magnum</code>、<code>dolphin</code> 这类)不支持工具调用,一用就报 <code>400</code></td></tr>
+  <tr><td>用不支持工具调用的模型跑 Agent</td><td>写作、角色扮演类微调模型没有 <code>Tools</code> 能力标签,拿来跑 Agent 会直接失败 —— 挑模型时认准模型页上带 <code>Tools</code> 的</td></tr>
   <tr><td>余额为 0</td><td>多数网关是预扣计费,余额为 0 时连免费模型也会返回 <code>402</code></td></tr>
 </table>
 

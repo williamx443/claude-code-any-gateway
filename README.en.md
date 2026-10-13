@@ -44,10 +44,10 @@ The gateway must expose an **Anthropic-compatible endpoint** (`POST /v1/messages
 ## Three things that bite everyone
 
 1. **Model IDs are namespaced** — `deepseek-chat` returns 404, `deepseek/deepseek-v4-pro` works.
-2. **Agent use requires tool calling** — writing/roleplay fine-tunes (names containing `magnum`, `dolphin`, …) do not support tools and will fail with `400 the upstream provider rejected this request`.
+2. **Agent use requires tool calling** — pick a model whose model page carries the **Tools** tag. Writing/roleplay fine-tunes do not, so don't use them for agent work.
 3. **Balance matters** — many gateways pre-authorise spend, so even free models return `402` when the balance is zero.
 
-Models verified to work with tool calling (tested 2026-09; check your gateway's model page): `deepseek/deepseek-v4-pro`, `deepseek/deepseek-v4-flash`, `qwen/qwen3-coder`, `moonshotai/kimi-k3`, `z-ai/glm-5.2`, `openai/gpt-5`, `anthropic/claude-sonnet-4.5`.
+Models verified to work with tool calling (re-checked 2026-09-23; check your gateway's model page): `deepseek/deepseek-v4-pro`, `deepseek/deepseek-v4-flash`, `qwen/qwen3-coder`, `qwen/qwen3-coder-next`, `moonshotai/kimi-k3`, `z-ai/glm-5.2`, `openai/gpt-oss-120b`.
 
 ## Other gateways
 

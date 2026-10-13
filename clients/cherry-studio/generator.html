@@ -79,9 +79,9 @@ footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:v
 <table>
   <tr><th style="width:42%">场景</th><th>推荐模型</th></tr>
   <tr><td>日常对话 / 通用</td><td><code>deepseek/deepseek-v4-pro</code>(便宜、上下文大)</td></tr>
-  <tr><td>要跑 Agent / Claude Code 这类会自动调用工具的功能</td><td><code>deepseek/deepseek-v4-pro</code> · <code>deepseek/deepseek-v4-flash</code> · <code>moonshotai/kimi-k3</code> · <code>z-ai/glm-5.2</code> · <code>qwen/qwen3-coder</code> · <code>anthropic/claude-sonnet-4.5</code> · <code>openai/gpt-5</code></td></tr>
+  <tr><td>要跑 Agent / Claude Code 这类会自动调用工具的功能</td><td><code>deepseek/deepseek-v4-pro</code> · <code>deepseek/deepseek-v4-flash</code> · <code>moonshotai/kimi-k3</code> · <code>z-ai/glm-5.2</code> · <code>qwen/qwen3-coder</code> · <code>qwen/qwen3-coder-next</code> · <code>openai/gpt-oss-120b</code></td></tr>
 </table>
-<div class="tip"><b>要点</b>:Agent / Claude Code 靠"工具调用"干活,所以要选支持工具调用的模型。<b>写作、角色扮演类模型(名字里带 magnum / dolphin 这类)不支持工具调用</b>,选了会直接报错。</div>
+<div class="tip"><b>要点</b>:Agent / Claude Code 靠"工具调用"干活,所以要选支持工具调用的模型 —— 模型页每个模型都带能力标签,认准其中带 <b>Tools</b> 的那个;写作、角色扮演这类微调模型没有这个标签,别拿来跑 Agent。</div>
 
 <h2>没装 Cherry Studio?手动配置(任何 OpenAI 兼容客户端都一样)</h2>
 <table>

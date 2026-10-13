@@ -88,7 +88,7 @@ tr:last-child td{border-bottom:none}
 <div class="warn"><b>别改内置的「OpenAI」那一项</b> —— 它的地址固定是 <code>api.openai.com</code>,会报"密钥不正确"。请新加一个服务商。</div>
 
 <h2>选哪个模型</h2>
-<div class="warn"><b>一个实测踩过的坑</b>:模型列表拉下来之后,默认选中的可能是个<b>名字排序靠前的写作向模型</b>(例如 <code>anthracite-org/magnum-v4-72b</code>)。它<b>不支持工具调用</b>,拿它跑 Agent 或 Claude Code 会报 <code>400 the upstream provider rejected this request</code> —— <b>手动把默认模型改成 <code>deepseek/deepseek-v4-pro</code> 就好</b>。</div>
+<div class="warn"><b>一个实测踩过的坑</b>:模型列表拉下来之后,默认选中的可能是个<b>名字排序靠前的写作向模型</b> —— 它没有 <b>Tools</b> 能力标签,拿它跑 Agent 或 Claude Code 会直接失败。<b>手动把默认模型改成 <code>deepseek/deepseek-v4-pro</code> 就好</b>。</div>
 <p>日常对话、写作、翻译,用 <code>deepseek/deepseek-v4-pro</code> 就行(通用首选)。要跑 Agent / Claude Code,必须选<b>支持工具调用</b>的:<code>deepseek/deepseek-v4-pro</code> · <code>deepseek/deepseek-v4-flash</code> · <code>moonshotai/kimi-k3</code> · <code>z-ai/glm-5.2</code> · <code>qwen/qwen3-coder</code>。想先用免费的,<code>nvidia/nemotron-3-super-120b-a12b:free</code> 这类也行(免费档上游会限流,报 <code>429</code> 就等几秒重试)。</p>
 
 <h2>撞到报错看这里</h2>
