@@ -21,7 +21,7 @@ This repo puts all of that behind **one `.env` and one command**, and documents 
 ## Quick start
 
 ```bash
-git clone https://github.com/zhenhuaw404-ux/claude-code-any-gateway.git
+git clone https://github.com/williamx443/claude-code-any-gateway.git
 cd claude-code-any-gateway
 cp config.example .env      # fill GATEWAY_BASE_URL / GATEWAY_API_KEY / MODEL
 ./run.sh                    # start Claude Code

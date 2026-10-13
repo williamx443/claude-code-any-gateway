@@ -38,7 +38,7 @@ Claude Code 默认只连 Anthropic 官方,Codex 默认只连 OpenAI。想接别�
 ## 30 秒上手
 
 ```bash
-git clone https://github.com/zhenhuaw404-ux/claude-code-any-gateway.git
+git clone https://github.com/williamx443/claude-code-any-gateway.git
 cd claude-code-any-gateway
 
 cp config.example .env
